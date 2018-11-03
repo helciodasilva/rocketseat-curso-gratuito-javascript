@@ -4,12 +4,19 @@
     </head>
     <body>
         <div id="app">
-            <input onkeypress="mostraAlerta()">
+            <input type="text" name="nome" />
+            <button class="botao">Adicionar</button>
         </div>
         <script>
-            function mostraAlerta(params) {
-                alert('Botão foi clicado');
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function () {
+                var text = btnElement.value;
+
+                alert(text);
             }
+
         </script>
     </body>
 </html>
